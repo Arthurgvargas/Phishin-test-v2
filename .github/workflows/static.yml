@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phishing Awareness Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			padding: 0;
+			margin: 0;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		main {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Phishing Awareness Page</h1>
+	</header>
+	<main>
+		<h2>Important Notice</h2>
+		<p>This is a phishing awareness page. If you received an email with a suspicious link and you clicked on it, you might have been redirected to a fake website that tries to steal your personal information. Please be more cautious when clicking on links and always verify the sender and the URL before entering any personal information.</p>
+		<button id="btn">Report phishing attempt</button>
+	</main>
+	<footer>
+		<script>
+			document.getElementById("btn").addEventListener("click", function() {
+				var email = prompt("Please enter your email to report the phishing attempt:");
+				if (email != null && email != "") {
+					alert("Thank you for reporting the phishing attempt. Your email address (" + email + ") has been recorded and will be used for investigation purposes only.");
+				}
+			});
+		</script>
+	</footer>
+</body>
+</html>
